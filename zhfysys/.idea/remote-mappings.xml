@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@sftp://zhfy@123.124.130.19:50022/home/zhfy/anaconda3/envs/django/bin/python3.6" />
+      </list>
+    </list>
+  </component>
+</project>
