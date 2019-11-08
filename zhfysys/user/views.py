@@ -76,3 +76,21 @@ def register(request):
             user.save()
             return HttpResponse(data_json)
         return HttpResponse(data_json)
+# 修改密码视图
+def change_password(request):
+    data_dict = {}
+    if request.method == 'POST':
+        received_json_data = json.loads(request.body)  # 把json转为字典
+        user_name = received_json_data['user_name']
+        password = received_json_data['password']
+        new_password = received_json_data['new_password']
+        try:
+            user = models.User.objects.get(user_name=user_name)
+            user.password = new_password
+            user.save()
+            data_dict['is_changed'] = 'yes'
+        except:
+            data_dict['is_changed'] = 'no'
+    data_json = json.dumps(data_dict)
+    return HttpResponse(data_json)
+
