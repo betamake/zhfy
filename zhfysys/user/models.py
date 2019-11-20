@@ -10,3 +10,7 @@ class User(models.Model):
     id_card_num = models.CharField(max_length=128, unique=True)
     def __str__(self):
         return self.user_name
+
+
+
+
